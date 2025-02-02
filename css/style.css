@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+:root{
+    --font-text : "Roboto Slab", serif;
+    --gray : #e4e4e4;
+    --second_gray : #b9b9b9;
+    --white : #f5f5f5;
+    --black : #45474B;
+    --second_black : #687973;
+    --primary_color : #F4CE14;
+    --blue : #1230AE;
+    --transition : all .3s ease-in-out;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--font-text);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--white);
+}
+.content{
+    background-color: var(--gray);
+    border: 1px solid var(--black);
+    max-width: 450px;
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.error_text{
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    word-spacing: 1px;
+    background-color: #ffebee;
+    color: #e94a4a;
+    border: 1px solid #e94a4a;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    display: none;
+}
+.form > h2{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cecece;
+    letter-spacing: .7px;
+    color: var(--second_black);
+}
+.form form{margin: 20px auto;}
+.form form .name_details{display: flex;gap: 10px;}
+.form form .name_details .field_input{flex-basis: 50%;}
+.form form .field_input{margin-bottom: 15px;position: relative;}
+.form form .field_input label{
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    color: var(--black);
+    font-weight: 500;
+}
+.form form .field_input input{
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--second_gray);
+    background-color: var(--white);
+    padding: 5px;
+    outline: none;
+    font-size: 13px;
+}
+.form form .field_input .eye_password{
+    position: absolute;
+    right: 10px;
+    top: 72%;
+    transform: translateY(-50%);
+    color: var(--second_gray);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.form form .field_input .eye_password:hover{color: var(--second_black);}
+.form form .field_input.field_image input{
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+}
+.form form .field_input button{
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.form form .field_input button:hover{
+    background-color: transparent;
+    color: var(--black);
+}
+.form form .link{
+    font-size: 14px;
+    letter-spacing: .5px;
+    color: var(--black);
+    text-align: center;
+}
+.form form .link a{
+    color: var(--blue);
+    text-decoration: underline;
+    transition: var(--transition);
+}
+.form form .link a:hover{text-decoration: none;}
+
+/* ------------------ PAGE USER ------------------ */
+section.users{
+    padding: 5px 10px;
+}
+section.users header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--black);
+}
+section.users header .container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+section.users header .container img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+section.users header .container .details h4{
+    color: var(--black);
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+section.users header .container .details p{
+    font-size: 14px;
+    color: var(--second_black);
+}
+section.users header .logout{
+    color: var(--white);
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+section.users header .logout:hover{background-color: transparent;color: var(--bl);}
+section.users .search{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+section.users .search .text{
+    font-size: 14px;
+    color: var(--black);
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+section.users .search .text.hide{display: none;}
+section.users .search input{
+    position: relative;
+    width:calc(100% - 50px);
+    height: 38px;
+    font-size: 15px;
+    padding: 0 13px;
+    border: 1px solid var(--black);
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    display: none;
+    pointer-events: none;
+    transition: var(--transition);
+}
+section.users .search input.show{
+    display: block;
+    pointer-events: auto;
+}
+section.users .search button{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    color: var(--black);
+    background-color: var(--white);
+    border: none;
+    border-radius: 0 5px 5px 0; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+section.users .search button:hover,section.users .search button.active{background-color: var(--black);color: var(--white);}
+section.users .users_list .user_result{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid var(--second_black);
+    transition: var(--transition);
+}
+section.users .users_list .user_result:last-child{border-bottom: 1px solid var(--second_black);}
+section.users .users_list .user_result:hover{background-color: var(--second_gray);}
+section.users .users_list .user_result img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+section.users .users_list .user_result .user_details{display: flex;align-items: center;gap: 25px;}
+section.users .users_list .user_result .user_details .user_name{
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 5px;
+    display: block;
+}
+section.users .users_list .user_result .user_details .text_msg{
+    font-size: 13px;
+    letter-spacing: .5px;
+    color: var(--second_black);
+    font-weight: 300;
+}
+section.users .users_list .user_result .user_status i{
+    font-size: 11px;
+    color: var(--second_black);
+}
+section.users .users_list .user_result .user_status.online i{color: rgb(89, 170, 8);}
+
+
+/* ---------- USER CHAT PAGE ---------- */
+.user_chat{padding: 0;}
+.user_chat header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--white);
+    border-radius: 10px 10px 0 0;
+    padding:10px 15px;
+}
+.user_chat header .back_icon{
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--black);
+}
+.user_chat header .back_icon:hover{color: var(--blue);}
+.user_chat header img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.user_chat header .details span{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+    text-transform: capitalize;
+    letter-spacing: .6px;
+}
+.user_chat header .details p{
+    font-size: 13px;
+    color: var(--second_black);
+    margin-top: 3px;
+    letter-spacing: .6px;
+    text-transform: capitalize;
+}
+.user_chat header .details p i{margin-right: 5px;}
+.user_chat header .details p i.online{color: rgb(89, 170, 8);}
+.user_chat .chat_box{
+    padding: 10px 15px;
+    height: 400px;
+    overflow-y: auto;
+}
+.user_chat > .typing_area{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-radius:0 0 10px 10px;
+}
+.user_chat > .typing_area .input_field{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid var(--second_gray);
+    padding: 5px 10px;
+    font-size: 13px;
+    color: var(--black);
+    outline: none;
+}
+.user_chat > .typing_area button{
+    height: 40px;
+    width: 50px;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid var(--second_gray);
+    border-left: none;
+    font-size: 21px;
+    background: var(--second_gray);
+    color: var(--black);
+    cursor: pointer;;
+    transition: var(--transition);
+}
+.user_chat > .typing_area button:disabled{
+    background-color: var(--second_black);
+    color: var(--gray);
+    cursor: not-allowed;
+}
+.user_chat > .typing_area button:not(:disabled):hover{background-color:transparent;}
+.user_chat .chat_box .chat{
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 7px 10px;
+    background: var(--second_black);
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+}
+.user_chat .chat_box .chat::after{
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--second_black);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.user_chat .chat_box .chat img{
+    width: 40px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.user_chat .chat_box .chat .details p{
+    color: var(--gray);
+    font-size: 14px;
+    letter-spacing: .7px;
+}
+.user_chat .chat_box .chat.incoming {background-color: var(--black);}
+.user_chat .chat_box .chat.incoming::after{background-color: var(--black);}
+.user_chat .chat_box .chat.outgoing{float: right;}
+.clear{clear: both;}
