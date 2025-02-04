@@ -1,4 +1,7 @@
+---------------- DATABASE -------------
 Create Database Name : chat_app_db
+
+// ==> You Can Just Import the Database File In (database/chat_app_db.sql)
 
 Table : ==> users
         - user_id
